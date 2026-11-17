@@ -20,7 +20,7 @@ export function authenticateToken(req, res, next){
         next();
     }
     catch{
-        return res.status(403).json({
+        return res.status(401).json({
             message: "token failed to be verified"
         })
     }

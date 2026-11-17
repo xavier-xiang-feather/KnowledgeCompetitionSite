@@ -102,6 +102,7 @@ export async function editQuestion(req, res){
 export async function deleteQuestion(req, res){
     const question_id = Number(req.params.id);
     if(!Number.isInteger(question_id) || question_id <= 0){
+        
         return res.status(400).json({
             message: "Invalid question id"
         });
